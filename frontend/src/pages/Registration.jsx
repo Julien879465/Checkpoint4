@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import expressAPI from "../services/expressAPI";
+import Username from "../components/Username";
+import Password from "../components/Password";
+import Email from "../components/Email";
 
 function Registration() {
   const navigate = useNavigate();
@@ -33,47 +36,38 @@ function Registration() {
   };
 
   return (
-    <div>
-      <div>
-        <div>
-          <div>
-            <h1>Bienvenue !</h1>
-            <div>
+    <div className="flex flex-col justify-center items-center min-h-full bg-slate-400">
+      <div className="flex flex-col justify-center items-center mb-4">
+        <div className="flex flex-col justify-center items-center mb-4">
+          <div className="flex flex-col justify-center items-center mb-4">
+            <h1 className="mb-4 text-3xl">Bienvenue !</h1>
+
+            <form
+              className="flex flex-col justify-center items-center mb-4"
+              onSubmit={handleForm}
+            >
+              <Username
+                username={username}
+                handleNameChange={handleNameChange}
+              />
+              <Email email={email} handleEmailChange={handleEmailChange} />
+              <Password
+                password={password}
+                handlePasswordChange={handlePasswordChange}
+              />
+              <button
+                className="border-2 bg-slate-200 px-2 py-1 "
+                type="submit"
+              >
+                Créer votre compte
+              </button>
+            </form>
+            <div className="flex flex-col justify-center items-center mb-4">
               <p>J'ai déjà un compte ?</p>
-              <Link to="/Connexion" type="button">
+              <Link className="underline" to="/Connexion" type="button">
                 Me connecter
               </Link>
             </div>
-            <form onSubmit={handleForm}>
-              <div className="mb-5 flex flex-col">
-                <label htmlFor="username">Nom d'utilisateur</label>
-                <input
-                  type="text"
-                  id="username"
-                  value={username}
-                  onChange={handleNameChange}
-                />
-              </div>
-              <div>
-                <label htmlFor="email">Adresse mail</label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={handleEmailChange}
-                />
-              </div>
-              <div>
-                <label htmlFor="password">Mot de passe</label>
-                <input
-                  type="password"
-                  id="password"
-                  value={password}
-                  onChange={handlePasswordChange}
-                />
-              </div>
-              <button type="submit">Créer votre compte</button>
-            </form>
           </div>
         </div>
       </div>

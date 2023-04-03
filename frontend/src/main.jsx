@@ -5,15 +5,18 @@ import { BrowserRouter } from "react-router-dom";
 import CurrentUserContextProvider from "./contexts/CurrentUserContext";
 import "./index.css";
 import App from "./App";
+import ExercicesContextProvider from "./contexts/ExercicesContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
     <CurrentUserContextProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <ExercicesContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ExercicesContextProvider>
     </CurrentUserContextProvider>
   </React.StrictMode>
 );

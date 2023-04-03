@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import expressAPI from "../services/expressAPI";
+import Password from "../components/Password";
+import Email from "../components/Email";
 
 import { useCurrentUserContext } from "../contexts/CurrentUserContext";
 
@@ -37,36 +39,35 @@ function Connexion() {
   };
 
   return (
-    <div>
-      <div>
-        <div>
-          <div>
-            <h1>Connectez vous sur votre espace !</h1>
-            <div>
-              <p>Je n'ai pas de compte ?</p>
-              <Link to="/">M'inscrire</Link>
-            </div>
-            <form onSubmit={handleSubmit}>
-              <div className="mb-5 flex flex-col">
-                <label htmlFor="email">Adresse mail</label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={handleEmailChange}
-                />
-              </div>
-              <div className="flex flex-col">
-                <label htmlFor="password">Mot de passe</label>
-                <input
-                  type="password"
-                  id="password"
-                  value={password}
-                  onChange={handlePasswordChange}
-                />
-              </div>
-              <button type="submit">Me connecter</button>
+    <div className="flex flex-col justify-center items-center min-h-full bg-slate-400">
+      <div className="flex flex-col justify-center items-center mb-4">
+        <div className="flex flex-col justify-center items-center mb-4">
+          <div className="flex flex-col justify-center items-center mb-4">
+            <h1 className="text-center mb-4 text-3xl">
+              Connectez vous sur votre espace !
+            </h1>
+            <form
+              className="flex flex-col justify-center items-center mb-4"
+              onSubmit={handleSubmit}
+            >
+              <Email email={email} handleEmailChange={handleEmailChange} />
+              <Password
+                password={password}
+                handlePasswordChange={handlePasswordChange}
+              />
+              <button
+                className="border-2 bg-slate-200 px-2 py-1 "
+                type="submit"
+              >
+                Me connecter
+              </button>
             </form>
+            <div className="flex flex-col justify-center items-center mb-4">
+              <p>Je n'ai pas de compte ?</p>
+              <Link className="underline" to="/registration">
+                M'inscrire
+              </Link>
+            </div>
           </div>
         </div>
       </div>

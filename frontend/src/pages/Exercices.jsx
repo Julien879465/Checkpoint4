@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import expressAPI from "../services/expressAPI";
+import { useExercicesContext } from "../contexts/ExercicesContext";
+
 import Card from "../components/Card";
 
 function Exercices() {
-  const [exercices, setExercices] = useState([]);
-  useEffect(() => {
-    expressAPI.get("/exercices").then((res) => setExercices(res.data));
-  }, []);
+  const { exercices } = useExercicesContext();
+
   return (
     <div className="flex flex-col gap-10">
       <h1 className="text-5xl text-center">Exercices</h1>
