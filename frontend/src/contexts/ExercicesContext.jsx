@@ -8,6 +8,7 @@ export const useExercicesContext = () => useContext(ExercicesContext);
 
 function ExercicesContextProvider({ children }) {
   const [exercices, setExercices] = useState([]);
+
   const [selectedExercice, setSelectedExercice] = useState(
     JSON.parse(localStorage.getItem("workout"))
   );

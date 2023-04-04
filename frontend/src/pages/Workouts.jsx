@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
 import Modal from "react-modal";
 import expressAPI from "../services/expressAPI";
 
@@ -71,16 +72,10 @@ function Workouts() {
       <p>workouts</p>
       {workouts.map((workout) => (
         <div key={workout.idworkout}>
-          <p>{workout.name}</p>
-          <input onChange={handleChangeName} type="text" value={newName} />
-          <p>{workout.serie1}</p>
-          <input onChange={handleChangeSerie1} type="text" value={newSerie1} />
-          <p>{workout.serie2}</p>
-          <input onChange={handleChangeSerie2} type="text" value={newSerie2} />
-          <p>{workout.serie3}</p>
-          <input onChange={handleChangeSerie3} type="text" value={newSerie3} />
-          <p>{workout.weight}</p>
-          <input onChange={handleChangeWeight} type="text" value={newWeight} />
+          <div>
+            {workout.name} {workout.serie1}-{workout.serie2}-{workout.serie3} @
+            {workout.weight}Kg
+          </div>
           <div>
             <button
               type="button"
@@ -88,7 +83,7 @@ function Workouts() {
                 openModal(workout);
               }}
             >
-              Ouvrir le modal
+              Modifier
             </button>
             <Modal
               isOpen={modalIsOpen}
@@ -125,12 +120,11 @@ function Workouts() {
               </button>
             </Modal>
           </div>
-
           <button
             type="button"
             onClick={() => handleDestroy(workout.idworkout)}
           >
-            destroy
+            Supprimer
           </button>
         </div>
       ))}

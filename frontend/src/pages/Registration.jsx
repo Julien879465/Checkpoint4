@@ -36,14 +36,14 @@ function Registration() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-full bg-slate-400">
+    <div className="flex flex-col justify-center items-center min-h-full text-white lg:scale-125">
       <div className="flex flex-col justify-center items-center mb-4">
         <div className="flex flex-col justify-center items-center mb-4">
           <div className="flex flex-col justify-center items-center mb-4">
-            <h1 className="mb-4 text-3xl">Bienvenue !</h1>
+            <h1 className="mb-4 text-3xl lg:text-5xl">Bienvenue !</h1>
 
             <form
-              className="flex flex-col justify-center items-center mb-4"
+              className="flex flex-col justify-center items-center mb-4 "
               onSubmit={handleForm}
             >
               <Username
@@ -56,15 +56,19 @@ function Registration() {
                 handlePasswordChange={handlePasswordChange}
               />
               <button
-                className="border-2 bg-slate-200 px-2 py-1 "
+                className="border-2 rounded-lg px-2 py-1 hover:scale-105 "
                 type="submit"
               >
                 Créer votre compte
               </button>
             </form>
-            <div className="flex flex-col justify-center items-center mb-4">
+            <div className="flex flex-col justify-center items-center mb-4 ">
               <p>J'ai déjà un compte ?</p>
-              <Link className="underline" to="/Connexion" type="button">
+              <Link
+                className="underline  hover:scale-105"
+                to="/Connexion"
+                type="button"
+              >
                 Me connecter
               </Link>
             </div>

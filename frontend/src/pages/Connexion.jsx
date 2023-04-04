@@ -40,11 +40,11 @@ function Connexion() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-full bg-slate-400">
+    <div className="flex flex-col justify-center items-center min-h-full text-white lg:scale-125">
       <div className="flex flex-col justify-center items-center mb-4">
         <div className="flex flex-col justify-center items-center mb-4">
           <div className="flex flex-col justify-center items-center mb-4">
-            <h1 className="text-center mb-4 text-3xl">
+            <h1 className="text-center mb-4 text-3xl lg:text-5xl">
               Connectez vous sur votre espace !
             </h1>
             <form
@@ -57,7 +57,7 @@ function Connexion() {
                 handlePasswordChange={handlePasswordChange}
               />
               <button
-                className="border-2 bg-slate-200 px-2 py-1 "
+                className="border-2 rounded-lg px-2 py-1 hover:scale-105 "
                 type="submit"
               >
                 Me connecter

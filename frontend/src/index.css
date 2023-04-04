@@ -10,6 +10,6 @@
   html,
   body,
   #root {
-    @apply h-full flex flex-col;
+    @apply h-full flex flex-col bg-second;
     }
 }

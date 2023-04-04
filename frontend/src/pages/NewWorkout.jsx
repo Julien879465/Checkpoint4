@@ -3,7 +3,7 @@ import NewExercice from "../components/NewExercice";
 
 function NewWorkout() {
   return (
-    <div>
+    <div className="flex h-full w-full">
       <NewExercice />
     </div>
   );
