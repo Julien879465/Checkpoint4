@@ -8,7 +8,7 @@ function Exercices() {
   const { exercices } = useExercicesContext();
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 text-white">
       <h1 className="text-5xl text-center">Exercices</h1>
       {exercices.map((exercice) => (
         <Link

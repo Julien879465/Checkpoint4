@@ -8,7 +8,7 @@ function Password({ password, handlePasswordChange }) {
         Mot de passe
       </label>
       <input
-        className="rounded-lg text-black px-1"
+        className="rounded-lg text-black px-1 drop-shadow-2xl"
         type="password"
         id="password"
         value={password}

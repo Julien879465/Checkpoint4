@@ -11,15 +11,22 @@ export default function Home() {
         <div className="flex flex-col h-full w-full lg:items-center lg:justify-center">
           <p className="text-center text-2xl ">Commencer un entrainement</p>
           <Link
-            className="h-[80%] w-[80%] flex flex-col self-center border-solid border-2 rounded-lg bg-haltere bg-cover bg-no-repeat lg:bg-center lg:h-[60%] lg:w-[60%] "
-            to="/newworkout"
+            className="drop-shadow-2xl h-[80%] w-[80%] flex flex-col self-center border-solid border-2 rounded-lg bg-haltere bg-cover bg-no-repeat bg-center lg:h-[60%] lg:w-[60%] "
+            to="/workout"
+          />
+        </div>
+        <div className="flex flex-col h-full w-full lg:items-center lg:justify-center">
+          <p className="text-center text-2xl"> Exercices</p>
+          <Link
+            className="drop-shadow-2xl h-[80%] w-[80%] flex flex-col self-center border-solid border-2 rounded-lg bg-exo bg-cover bg-no-repeat bg-center lg:h-[60%] lg:w-[60%]"
+            to="/exercices"
           />
         </div>
         <div className="flex flex-col h-full w-full lg:items-center lg:justify-center">
           <p className="text-center text-2xl"> Historique</p>
           <Link
-            className="h-[80%] w-[80%] flex flex-col self-center border-solid border-2 rounded-lg bg-note bg-cover bg-no-repeat lg:bg-center lg:h-[60%] lg:w-[60%]"
-            to="/workouts"
+            className="drop-shadow-2xl h-[80%] w-[80%] flex flex-col self-center border-solid border-2 rounded-lg bg-note bg-cover bg-no-repeat bg-center lg:h-[60%] lg:w-[60%]"
+            to="/historique"
           />
         </div>
       </div>

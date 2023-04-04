@@ -8,7 +8,7 @@ function Username({ username, handleNameChange }) {
         Nom d'utilisateur
       </label>
       <input
-        className="rounded-lg text-black px-1"
+        className="rounded-lg text-black px-1 drop-shadow-2xl"
         type="text"
         id="username"
         value={username}

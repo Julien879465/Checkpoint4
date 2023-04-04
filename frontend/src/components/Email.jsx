@@ -8,7 +8,7 @@ function Email({ email, handleEmailChange }) {
         Adresse mail
       </label>
       <input
-        className="rounded-lg text-black px-1 "
+        className="rounded-lg text-black px-1 drop-shadow-2xl "
         type="email"
         id="email"
         value={email}

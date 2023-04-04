@@ -15,6 +15,7 @@ module.exports = {
       backgroundImage: {
         haltere: "url('./assets/haltere.webp')",
         note: "url('./assets/notes.jpg')",
+        exo: "url('./assets/exo.webp')",
       },
       screens: {
         sm: "480px",
@@ -22,6 +23,9 @@ module.exports = {
         lg: "976px",
         xl: "1440px",
       },
+    },
+    fontFamily: {
+      roboto: ["Roboto", "sans-serif"],
     },
     colors: {
       main: "#2563eb",

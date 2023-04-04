@@ -11,13 +11,13 @@ function App() {
   return (
     <div className="flex flex-col h-full">
       <Routes>
-        <Route path="/registration" element={<Registration />} />
+        <Route path="/" element={<Registration />} />
         <Route path="/connexion" element={<Connexion />} />
         <Route path="/home" element={<Home />} />
         <Route path="/exercices" element={<Exercices />} />
         <Route path="/exercices/:id" element={<ExercicesDetails />} />
-        <Route path="/newworkout" element={<NewWorkout />} />
-        <Route path="/workouts" element={<Workouts />} />
+        <Route path="/workout" element={<NewWorkout />} />
+        <Route path="/historique" element={<Workouts />} />
       </Routes>
     </div>
   );
