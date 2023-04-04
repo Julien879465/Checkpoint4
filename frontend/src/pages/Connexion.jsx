@@ -27,6 +27,7 @@ function Connexion() {
             username: res.data.user.username,
             email: res.data.user.email,
             role: res.data.user.role,
+            id: res.data.user.idUser,
           };
           setUser(res.data.user);
           localStorage.setItem("user", JSON.stringify(user));

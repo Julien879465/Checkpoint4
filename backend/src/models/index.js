@@ -39,6 +39,11 @@ const ExerciceManager = require("./ExerciceManager");
 models.exercice = new ExerciceManager();
 models.exercice.setDatabase(pool);
 
+const WorkoutManager = require("./WorkoutManager");
+
+models.workout = new WorkoutManager();
+models.workout.setDatabase(pool);
+
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
 
